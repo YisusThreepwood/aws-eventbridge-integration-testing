@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pytest = "~=6.2.4"
+localstack = "~=0.12.14"
+localstack-ext = ">=0.12.9.30"
+localstack-client = ">=1.20"
+moto-ext = {version = ">=2.0.3.23", extras = ["all"]}
+flask-cors = "*"
+h11 = "*"
+quart = "*"
+amazon-kclpy = "*"
+docker = "*"
+aws-sam-translator = "*"
+cbor2 = "*"
+jsonpatch = "*"
+cachetools = "*"
+crontab = "*"
+pyOpenSSL = "*"
+
+[packages]
+boto3 = "*"
+
+[requires]
+python_version = "3.8"
