@@ -12,8 +12,6 @@ def handler(event, context):
     detail = event.get('detail')
     club_id = detail.get('clubId')
     tournament_id = detail.get('tournamentId')
-    print(club_id)
-    print(tournament_id)
 
     if is_first_tournament_enrollment(club_id, tournament_id):
         coupon_code = generate_coupon_code()

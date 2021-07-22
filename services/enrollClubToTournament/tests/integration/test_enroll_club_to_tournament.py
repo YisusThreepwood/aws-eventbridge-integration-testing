@@ -11,7 +11,8 @@ from localstack.utils.aws.aws_stack import await_stack_completion
 def create_and_await_cdk_stack() -> NoReturn:
     stack_template_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
-        "../../../../infrastructure/enrollments/cdk.out/EnrollmentsStack.template.json"
+        "../../../../infrastructure/enrollments/cdk.out/"
+        "EnrollmentsStack.template.json"
     )
     with open(stack_template_path) as f:
         template = f.read()
@@ -75,7 +76,8 @@ class TestEnrollClubToTournament:
         tournament_enrollment = dynamodb_client.query(
             TableName='TournamentEnrollments',
             Select='COUNT',
-            KeyConditionExpression='TournamentId = :tournamentId AND ClubId = :clubId',
+            KeyConditionExpression=
+                'TournamentId = :tournamentId AND ClubId = :clubId',
             ExpressionAttributeValues={
                 ':tournamentId': {'S': tournament_id},
                 ':clubId': {'S': club_id}

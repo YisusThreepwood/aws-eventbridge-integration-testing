@@ -4,11 +4,12 @@ An example of an Event Drive System built under a serverless microservices archi
 implemented with Python.
 
 # Requirements:
+* OS Linux
 * Python ~=3.8.0
 * AWS CDK ~=1.111
 * Pipenv 2021.5.29
 
-# Environment build (Linux)
+# Environment build
 * Create the virtualenv for the CDK application and install de required dependencies
 ```
 $ cd infrastructure/enrollments
@@ -42,7 +43,7 @@ _Exception: Status "CREATE_FAILED" for stack "enrollmentsStack" not in expected 
   
 Make sure temporary folders (_/tmp/localstack_ and _/tmp/local-kms_) have write permission
 
-###Localstack cannot open service ports
+### Localstack cannot open service ports
 _Exception: Port xxxxx (path: None) was not open_
 
   
